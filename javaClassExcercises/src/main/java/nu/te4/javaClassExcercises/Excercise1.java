@@ -33,9 +33,13 @@ public class Excercise1 {
         
         buildings.add(new School(
                                 rand.nextInt(10),
-                                "Datagatan1",
-                                (double)rand.nextInt(50), //not gonna look up how
-                                (double)rand.nextInt(50), //to set bounds on 
-                                rand.nextInt()));         //random.NextDouble(),
+                                "Datagatan2",
+                                (double)rand.nextInt(50), //not gonna look up
+                                (double)rand.nextInt(50), //how to set bounds on 
+                                rand.nextInt()));         //random.NextDouble()
+        
+        for (House building :buildings) {
+            System.out.println(building.generateDisplayString());      
+        }
     }
 }
