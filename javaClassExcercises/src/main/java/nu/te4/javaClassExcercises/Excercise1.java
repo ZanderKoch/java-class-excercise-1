@@ -18,22 +18,36 @@ public class Excercise1 {
     public class House{
         //instance variables
         protected int floors;
-        protected String adress;
-        protected double lenght; //in meters
+        protected String address;
+        protected double length; //in meters
         protected double width;  //in meters
         
         //constructors
         public House(int floors, String adress, double lenght, double width) {
             this.floors = floors;
-            this.adress = adress;
-            this.lenght = lenght;
+            this.address = adress;
+            this.length = lenght;
             this.width = width;
         }
         
         //class methods
         public double calculateArea(){
-            return this.lenght * this.width;
+            return this.length * this.width;
         }
+        
+        //generates a nicely formated string showing the object's information
+        public String generateDisplayString(){
+            String displayString = String.format("""
+                    Floors: %d
+                    Adress: %s
+                    Length: %fm, Width: %fm
+                    Area: %fm^2""",
+                    this.floors,
+                    this.address,
+                    this.length, this.width,
+                    this.calculateArea());
+            
+            return displayString;
+        }      
     }
-    
-}
+
