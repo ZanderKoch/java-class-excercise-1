@@ -29,6 +29,11 @@ public class Excercise1 {
             this.lenght = lenght;
             this.width = width;
         }
+        
+        //class methods
+        public double calculateArea(){
+            return this.lenght * this.width;
+        }
     }
     
 }
