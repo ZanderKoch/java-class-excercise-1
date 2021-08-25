@@ -10,12 +10,25 @@ package nu.te4.javaClassExcercises;
  * @author Elev
  */
 public class Excercise1 {
+    ///////////
+    //Classes//
+    ///////////
+
     //superclass
-    private class Hus{
+    public class House{
+        //instance variables
         protected int floors;
         protected String adress;
         protected double lenght; //in meters
         protected double width;  //in meters
+        
+        //constructors
+        public House(int floors, String adress, double lenght, double width) {
+            this.floors = floors;
+            this.adress = adress;
+            this.lenght = lenght;
+            this.width = width;
+        }
     }
     
 }
