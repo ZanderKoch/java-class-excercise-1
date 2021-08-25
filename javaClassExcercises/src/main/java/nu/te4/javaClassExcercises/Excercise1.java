@@ -22,7 +22,7 @@ public class Excercise1 {
         protected double length; //in meters
         protected double width;  //in meters
         
-        //constructors
+        //constructor
         public House(int floors, String adress, double lenght, double width) {
             this.floors = floors;
             this.address = adress;
@@ -31,7 +31,7 @@ public class Excercise1 {
         }
         
         //class methods
-        public double calculateArea(){
+        protected double calculateArea(){
             return this.length * this.width;
         }
         
@@ -50,4 +50,57 @@ public class Excercise1 {
             return displayString;
         }      
     }
-
+    
+    //subclass of House
+    public class School extends House{
+        //instance variables
+        private int classrooms; //total amount of classrooms in the school
+        
+        //constructor
+        public School(int floors, String adress, double lenght, double width, int classrooms) {
+            super.floors = floors;
+            super.address = adress;
+            super.length = lenght;
+            super.width = width;
+            this.classrooms = classrooms;
+        }
+        
+        //methods
+        private double calculateAverageClassroomArea(){
+            return super.calculateArea() / this.classrooms;
+        }
+        
+        private double calculateClassroomsPerFloor(){
+            return this.classrooms / super.floors;
+        }
+        
+        @Override
+        public String generateDisplayString(){
+            String displayString = String.format("""
+                    Floors: %d
+                    Adress: %s
+                    Length: %fm, Width: %fm
+                    Area: %fm^2
+                    ---School specific---
+                    Classroom(s): %d
+                    Average area / classroom: %fm^2
+                    Classroom(s) / floor: %f""",
+                    super.floors,
+                    super.address,
+                    super.length, super.width,
+                    super.calculateArea(),
+                    this.classrooms,
+                    this.calculateAverageClassroomArea(),
+                    this.calculateClassroomsPerFloor());
+            
+            return displayString;
+        }
+    }
+    
+    ////////
+    //Main//
+    ////////
+    static void main(){
+        
+    }
+}
