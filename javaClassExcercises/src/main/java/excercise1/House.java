@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package nu.te4.javaClassExcercises;
+package excercise1;
 
 /**
  *
@@ -28,7 +28,7 @@ public class House {
 
     //class methods
     protected double calculateArea(){
-        return this.length * this.width;
+        return this.length * this.width * this.floors;
     }
 
     //generates a nicely formated string showing the object's information

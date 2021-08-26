@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package nu.te4.javaClassExcercises;
+package excercise1;
 
 import java.lang.Integer;
 import java.util.Random;
@@ -18,9 +18,7 @@ public class Excercise1 {
     ////////
     //Main//
     ////////
-    public static void main(){
-        
-
+    public static void main(String[] args){      
         //creating an array of houses and schools
         Random rand = new Random();
         
